@@ -1,3 +1,4 @@
 import controller
 # точка входа в программу
-controller.start()
+if __name__ == '__main__':
+    controller.start()

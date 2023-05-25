@@ -3,11 +3,12 @@ def start():
     viev.privet() # Приветствие
     while True:
         viev.menu()
-        point = input('введите команду из меню:')
+        point = input('введите команду из меню: ')
         # 1 - показать контакты
         if point == '1':
-            data = model.get_data()
-            viev.contacts(data)
+            model.get_data()
+            input() # ждем ввода чего либо для комфортного отображения информации
+
         # 2 - добавить контакты
         elif point == '2':
             contact = input('введите контакт в формате фамилия имя;телефон')

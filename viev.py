@@ -12,6 +12,9 @@ def menu():
 def not_success(res):
     print('нет записи')
 
+def print_result(str1):
+    print(str1)
+
 def contacts():
     pass
 
