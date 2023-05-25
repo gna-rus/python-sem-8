@@ -18,11 +18,14 @@ def start():
                 viev.success(res)
             else:
                 viev.not_success(res)
+
         # 3 - поиск номера телефона
         elif point == '3':
-            surname = input('введите фамилию для поиска номера:')
+            surname = input('введите фамилию для поиска номера: ')
             resalt = model.find(surname)
-            viev.show_find(resalt)
+            # viev.show_find(resalt)
+            input() # ожидание
+
         # 4 - изменить номер телефона
         elif point == '4':
             surname1 = input('введите фамилию для изменения номера:')

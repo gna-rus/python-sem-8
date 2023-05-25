@@ -10,10 +10,10 @@ def menu():
 6- выход''')
 
 def success():
-    pass
+    print('Успех!')
 
 def not_success(res):
-    print('нет записи')
+    print('Error!!!')
 
 def print_result(str1):
     print(str1)
