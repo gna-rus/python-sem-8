@@ -9,6 +9,9 @@ def menu():
 5- удалить контакт
 6- выход''')
 
+def success():
+    pass
+
 def not_success(res):
     print('нет записи')
 
@@ -18,8 +21,7 @@ def print_result(str1):
 def contacts():
     pass
 
-def success():
-    pass
+
 
 def show_find():
     pass

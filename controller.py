@@ -11,8 +11,9 @@ def start():
 
         # 2 - добавить контакты
         elif point == '2':
-            contact = input('введите контакт в формате фамилия имя;телефон')
-            res = model.add_contact(contact)
+            contact = input('введите имя и фамилию котакта: ')
+            contact_num = input('введите номер телефона контакта: ')
+            res = model.add_contact(contact, contact_num)
             if res:
                 viev.success(res)
             else:

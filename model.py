@@ -1,6 +1,4 @@
 import viev
-def add_contact(contact):
-    res = 0
 
 # функция вывода всех контактов на экран
 def get_data():
@@ -9,6 +7,12 @@ def get_data():
         for i in fl:
             # выводим информацию на экран
             viev.print_result(i)
+
+# добавляем контакт в БД
+def add_contact(contact, contact_num):
+    with open("test.txt", "a", encoding="UTF-8" ) as file1:
+        file1.write(f"{contact};{contact_num}" + "\n")
+
 
 def find():
     pass
