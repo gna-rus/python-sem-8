@@ -8,8 +8,16 @@ def menu():
 4- изменить номер телефона
 5- удалить контакт
 6- выход''')
-def not_success(res):
-    print('нет записи') 
+
+         
+def success(res):
+    print('записано')
+    
+def contacts(data):
+    print(data)
+def show_find(resalt):
+    print(resalt)
+                
        
     
       

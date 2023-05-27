@@ -10,12 +10,9 @@ def start():
         elif point == '2':
             contact = input('введите контакт в формате фамилия имя;телефон')
             res = model.add_contact(contact)
-            if res:
-                viev.success(res)
-            else:
-                viev.not_success(res)
+            viev.success(res)          
         elif point == '3':
-            surname = input('введите фамилию для поиска номера:')
+            surname = input('введите фамилию имя для поиска номера:')
             resalt = model.find(surname)
             viev.show_find(resalt)
         elif point == '4':
