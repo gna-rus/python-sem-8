@@ -16,20 +16,17 @@ def start():
             resalt = model.find(surname)
             viev.show_find(resalt)
         elif point == '4':
-            surname1 = input('введите фамилию для изменения номера:')
+            surname1 = input('введите фамилию имя для изменения номера:')
             number = input('введите новый номер')
             res1 = model.add_number(surname1,number) 
-            if res1:
-                viev.success_number(res1) 
-            else:
-                viev.not_number(res1)
+            viev.success_number(res1)
+             
+            
         elif point == '5':
-            surname2 = input('введите фамилию для удаления контакта:')
+            surname2 = input('введите фамилию имя для удаления контакта:')
             res2 = model.del_contact(surname2) 
-            if res2:
-                viev.success_del(res2) 
-            else:
-                viev.not_del(res2)
+            viev.success_del(res2) 
+            
         elif point == '6':
             break
         else:
