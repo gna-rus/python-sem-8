@@ -1,5 +1,8 @@
 import viev, model
 def start():
+    with open('file.text','a',encoding='utf-8') as file:
+           file.write('Справочник')
+           file.write('/n')
     viev.privet()
     while True:
         viev.menu()
