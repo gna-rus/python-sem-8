@@ -139,12 +139,20 @@ class Ui_MainWindow(object):
             self.pbt_5.setText(_translate("MainWindow", "Удалить"))
 
         def add_function(self):
-            self.text = "123"
+            self.text = ""
+            self.lineEdit.setPlaceholderText("Введите текст")
             # выводим весь текст из файла
             self.pbt_1.clicked.connect(lambda: self.write_label(self.text))
+            # извлекаю данные из Строчки и передаю их
+            # Вводи нового текста в файл
+            self.pbt_2.clicked.connect(lambda: self.onChanged( self.lineEdit.text()))
+            # Динамическое отслеживание введенного текст
+            # self.lineEdit.textChanged[str].connect(self.onChanged)
 
 
+        # Функция вывода на экран всех пользователей
         def write_label(self, text):
+            self.listWidget_1.addItem(f"{text}")
             with open("test.txt", "r", encoding="UTF-8") as self.file1:
                 self.fl = self.file1.readlines()
                 for i in self.fl:
@@ -153,6 +161,15 @@ class Ui_MainWindow(object):
                     self.str1 = self.str0[0]
                     self.str2 = self.str0[1]
                     self.listWidget_1.addItem(f"{self.str1} | {self.str2 }")
+
+        # Функция добавления нового пользователя
+        def onChanged(self, text):
+            with open("test.txt", "a", encoding="UTF-8") as self.file1:
+                self.file1.write(text+"\n")
+
+
+        def return_pressed(self):
+            print("!!!!")
 
     if __name__ == "__main__":
         import sys
