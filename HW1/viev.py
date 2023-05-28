@@ -17,7 +17,10 @@ def contacts(data):
     print(data)
 def show_find(resalt):
     print(resalt)
-                
+def success_number(res1):
+    print('изменен номер')
+def success_del(res2):
+    print('контакт удален')                    
        
     
       
