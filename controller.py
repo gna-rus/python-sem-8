@@ -1,4 +1,6 @@
 import viev, model
+
+
 def start():
     viev.privet()
     while True:
@@ -17,24 +19,25 @@ def start():
         elif point == '3':
             surname = input('введите фамилию имя для поиска номера:')
             resalt = model.find(surname)
+
             viev.show_find(resalt)
         # 4 - изменить номер телефона
         elif point == '4':
             surname1 = input('введите фамилию для изменения номера:')
             number = input('введите новый номер')
-            res1 = model.add_number(surname1,number)
+            res1 = model.add_number(surname1, number)
             if res1:
-                viev.success_number()
+                viev.success_number(res1)
             else:
-                viev.not_number()
+                viev.not_number(res1)
         # 5 - удалить контакт
         elif point == '5':
             surname2 = input('введите фамилию для удаления контакта:')
             res2 = model.del_contact(surname2)
             if res2:
-                viev.success_del()
+                viev.success_del(res2)
             else:
-                viev.not_number()
+                viev.not_number(res2)
         # 6 - выход
         elif point == '6':
             break
@@ -42,5 +45,3 @@ def start():
             viev.error()
 
         input()
-                                                
-    
