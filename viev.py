@@ -1,5 +1,6 @@
 def privet():
     print('Привет, ниже ты увидешь меню нашего справочника')
+
 def menu():
     print('''Меню
 1- показать контакты
@@ -9,38 +10,28 @@ def menu():
 5- удалить контакт
 6- выход''')
 
-def success():
-    print('Успех!')
-
-def not_success(res):
-    print('Error!!!')
-
 def print_result(str1):
-    print(str1)
-
-def contacts():
-    pass
-
-
-
-def show_find():
-    pass
+    if str1 != None:
+        print(str1)
 
 def success_number():
-    pass
-
-def not_number():
-    pass
+    print('записано')
 
 def success_del():
-    pass
+    print("пользователь удален")
 
-def not_del():
-    pass
+def contacts(data):
+    print(data)
+
+def show_find(resalt):
+    print(resalt)
+
+def not_number():
+    print("Error")
 
 def error():
-    pass
-       
-    
-      
+    print("Неизвестная ошибка!")
+
+
+
     
