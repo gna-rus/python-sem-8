@@ -14,8 +14,11 @@ def print_result(str1):
     if str1 != None:
         print(str1)
 
-def success_number(res):
+def success_number():
     print('записано')
+
+def success_del():
+    print("пользователь удален")
 
 def contacts(data):
     print(data)
@@ -25,6 +28,9 @@ def show_find(resalt):
 
 def not_number():
     print("Error")
+
+def error():
+    print("Неизвестная ошибка!")
 
 
 

@@ -24,21 +24,23 @@ def start():
             number = input('введите новый номер')
             res1 = model.add_number(surname1,number)
             if res1:
-                viev.success_number(res1)
+                viev.success_number()
             else:
-                viev.not_number(res1)
+                viev.not_number()
         # 5 - удалить контакт
         elif point == '5':
             surname2 = input('введите фамилию для удаления контакта:')
             res2 = model.del_contact(surname2)
             if res2:
-                viev.success_del(res2)
+                viev.success_del()
             else:
-                viev.not_del(res2)
+                viev.not_number()
         # 6 - выход
         elif point == '6':
             break
         else:
-            viev.error() 
+            viev.error()
+
+        input()
                                                 
     
