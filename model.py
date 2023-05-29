@@ -46,7 +46,6 @@ def add_number(surname1, number):
         # далее алгорит перезаливки данных из нового в старый файл
         with open("test.txt", "r+", encoding="UTF-8") as file1, open("test1.txt", "r", encoding="UTF-8") as file2:
             fl = file2.readlines()
-            file1.truncate()
             for i in fl:
                 file1.writelines(i) # заполняю старый файл новыми данными
         open("test1.txt", "w").close() # очищаем новый файл полностью (может стоит прописать алгоритм уделания файла)
@@ -69,7 +68,6 @@ def del_contact(surname1):
         # далее алгорит перезаливки данных из нового в старый файл
         with open("test.txt", "r+", encoding="UTF-8") as file1, open("test1.txt", "r", encoding="UTF-8") as file2:
             fl = file2.readlines()
-            file1.truncate()
             for i in fl:
                 file1.writelines(i)  # заполняю старый файл новыми данными
         open("test1.txt", "w").close()  # очищаем новый файл полностью (может стоит прописать алгоритм уделания файла)
