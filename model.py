@@ -1,14 +1,13 @@
-import viev
-
-
 # функция вывода всех контактов на экран
 def get_data():
     try:
         with open("test.txt", "r", encoding="UTF-8") as file1:
             fl = file1.readlines()
+            list_rez = []
             for i in fl:
                 # выводим информацию на экран
-                viev.print_result(i)
+                list_rez.append(i)
+            return list_rez
     except FileNotFoundError:
         # оповещение что файла нет и создание необходимого пустого файла
         print("Файл отсутствует!")
@@ -41,7 +40,7 @@ def add_number(surname1, number):
             with open("test1.txt", "a", encoding="UTF-8") as file2:
                 for i in fl:
                     if i.split(";")[0] == surname1:
-                        file2.writelines(f"{surname1};{number}")  # загружает в файл строку с изменнным номером телефона
+                        file2.writelines(f"{surname1};{number}\n")  # загружает в файл строку с изменнным номером телефона
                     else:
                         file2.write(i)  # загружает всю строку без изменений
         open("test.txt", "w").close()  # очищаем старый файл полностью

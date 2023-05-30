@@ -25,7 +25,8 @@ def menu():
 
 
 def contacts(data):  # 1 пункт. Демонстрация контактов.
-    print_red_colour(data)
+    for i in data:
+        print_red_colour(i)
 
 
 def success(res):  # 2 пункт. Добавление контакта.
@@ -55,3 +56,6 @@ def not_del(res2):
 
 def error():
     print_red_colour("Неизвестная ошибка")
+
+def print_result(word):
+    print_green_colour(word)

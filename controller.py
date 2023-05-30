@@ -43,5 +43,4 @@ def start():
             break
         else:
             viev.error()
-
         input()
